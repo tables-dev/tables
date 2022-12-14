@@ -28,6 +28,6 @@
             input.value = "";
             item.appendChild(li);
             itemCount++;
-        }}>Add</button>
+        }}>Add<span class="visually-hidden"> item</span></button>
     </div>
 </main>
