@@ -2,7 +2,6 @@
     // @ts-nocheck
 
     export let itemCount = 0;
-    export let items = [];
 </script>
 
 <main>
@@ -23,8 +22,10 @@
 
             li.classList.add("list-group-item", "text-break");
             li.id = `item-${itemCount}`;
-            li.innerHTML = input.value;
-            items.push(input.value);
+            li.innerHTML = `${input.value}
+<span class="btn-close float-end d-print-none" onclick="this.parentNode.remove()">
+    <div class="visually-hidden">Remove item</div>    
+</span>`;
             input.value = "";
             item.appendChild(li);
             itemCount++;
