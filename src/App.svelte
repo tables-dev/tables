@@ -1,7 +1,7 @@
 <script>
     // @ts-nocheck
 
-    export let itemCount = 1;
+    export let itemCount = 0;
 </script>
 
 <main>
