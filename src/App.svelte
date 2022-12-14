@@ -1,7 +1,7 @@
 <script>
     // @ts-nocheck
 
-    export let itemCount = 0;
+    var itemCount = 0;
 </script>
 
 <main>
@@ -21,7 +21,6 @@
             let item = document.getElementById("items");
 
             li.classList.add("list-group-item", "text-break");
-            li.id = `item-${itemCount}`;
             li.innerHTML = `${input.value}
 <span class="btn-close float-end d-print-none" onclick="this.parentNode.remove()">
     <div class="visually-hidden">Remove item</div>    
