@@ -2,12 +2,6 @@
     // @ts-nocheck
 
     export let itemCount = 1;
-
-    document.addEventListener("keypress", (event) => {
-        if (event.key == "Enter") {
-            document.getElementById("add-item-button").click();
-        };
-    });
 </script>
 
 <main>
