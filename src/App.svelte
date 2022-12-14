@@ -21,7 +21,7 @@
             let input = document.getElementById("add-item-input");
             let item = document.getElementById("items");
 
-            li.classList.add("list-group-item");
+            li.classList.add("list-group-item", "text-break");
             li.id = `item-${itemCount}`;
             li.innerHTML = input.value;
             items.push(input.value);
