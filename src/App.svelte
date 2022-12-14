@@ -11,9 +11,15 @@ document.addEventListener("keypress", (event) => {
 </script>
 
 <ul class="list-group m-3" id="items"></ul>
+<br>
+<br>
 
 <div class="input-group mb-3 fixed-bottom">
-    <input type="text" class="form-control ms-3" placeholder="Type a list item here" id="add-item-input">
+    <input type="text" class="form-control ms-3" placeholder="Type a list item here" id="add-item-input" on:keydown={(event) => {
+        if (event.key == "Enter") {
+            document.getElementById("add-item-button").click();
+        };
+    }}>
     <button class="btn btn-primary input-group-text me-3" id="add-item-button" on:click={() => {
         let li = document.createElement("li");
         let input = document.getElementById("add-item-input");
