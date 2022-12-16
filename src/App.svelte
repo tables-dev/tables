@@ -51,16 +51,11 @@ ${input.value}
             <li class="dropdown-item" on:click={() => {
                 itemStatus.set(["Done", "success"]);
             }}>Done</li>
-            <li><hr class="dropdown-divider"></li>
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <li class="dropdown-item" on:click={() => {
-                itemStatus.set(["None", "light"]);
-            }}>None</li>
         </ul>
     </div>
 
     <div class="modal fade" id="deleteItem" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Delete this item?</h4>
