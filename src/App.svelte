@@ -7,7 +7,7 @@
 </script>
 
 <main>
-    <ul class="list-group m-3" id="items"></ul>
+    <div id="items"></div>
     <br>
     <br>
 
@@ -19,18 +19,18 @@
         }}>
 
         <button class="btn btn-primary input-group-text" id="add-item-button" on:click={() => {
-            let li = document.createElement("li");
+            let div = document.createElement("div");
             let input = document.getElementById("add-item-input");
             let item = document.getElementById("items");
 
-            li.classList.add("list-group-item", "text-break");
-            li.innerHTML = `<span class="badge text-bg-${$itemStatus[1]}">${$itemStatus[0]}</span>
+            div.classList.add("list-group", "list-group-item", "text-break", "m-3");
+            div.innerHTML = `<span class="badge text-bg-${$itemStatus[1]}">${$itemStatus[0]}</span>
 ${input.value}
 <span class="btn-close float-end d-print-none" data-bs-toggle="modal" data-bs-target="#deleteItem">
     <div class="visually-hidden">Remove item</div>    
 </span>`;
             input.value = "";
-            item.appendChild(li);
+            item.appendChild(div);
             itemCount++;
             itemStatus.set(["None", "light"]);
         }}>Add<span class="visually-hidden"> item</span></button>
