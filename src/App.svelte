@@ -23,7 +23,7 @@
             let input = document.getElementById("add-item-input");
             let item = document.getElementById("items");
 
-            div.classList.add("list-group", "list-group-item", "text-break", "m-3");
+            div.classList.add("list-group", "list-group-item", "text-break", "m-3", "rounded");
             div.innerHTML = `<span class="badge text-bg-${$itemStatus[1]}">${$itemStatus[0]}</span>
 ${input.value}
 <span class="btn-close float-end d-print-none" data-bs-toggle="modal" data-bs-target="#deleteItem">
